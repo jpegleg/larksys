@@ -1,0 +1,11 @@
+[Unit]
+Description=
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/larksys
+TimeoutStartSec=0
+
+[Install]
+WantedBy=larksys.target
