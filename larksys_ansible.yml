@@ -1,0 +1,26 @@
+---
+- name: larksys ansible deploy
+  hosts: larksys
+  tasks:
+  
+  - name: install the binary
+    copy:
+      src: files/larksys
+      dest: /usr/bin/larksys
+    tags: 
+      - deploy
+      
+  - name: deploy the systemd unit file
+    copy:
+      src: larksys.service
+      dest: /etc/systemd/system/larksys.service
+    tags: 
+      - deploy
+      
+  - name: enable and restart the service
+    shell: systemctl enable larksys && systemctl restart larksys
+    args:
+      executable: /bin/bash
+    tags: 
+      - restart
+...
