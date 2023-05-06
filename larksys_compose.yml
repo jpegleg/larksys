@@ -1,0 +1,11 @@
+version: '3'
+services:
+  morpho:
+    image: localhost:5000/larksys
+    container_name: larksys
+    restart: unless-stopped
+    volumes:
+      - /opt/larksys/workspace/:/opt/larksys/workspace/
+    logging:
+        options:
+            max-size: "20m"
