@@ -1,0 +1,28 @@
+---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: larksys
+  namespace: larksys
+  labels:
+    app.kubernetes.io/name: larksys
+  annotations:
+    app.kubernetes.io/instance: larksys
+    app.kubernetes.io/version: 0.0.1
+    app.kubernetes.io/component: daemon
+    app.kubernetes.io/managed-by: manifest
+    app.kubernetes.io/created-by: jpegleg
+spec:
+  selector:
+    matchLabels:
+      app: larksys
+  template:
+    metadata:
+      labels:
+        app: larksys
+        app.kubernetes.io/name: larksys
+    spec:
+      containers:
+      - name: larksys
+        image: "localhsot:5000/larksys:latest"
+...
