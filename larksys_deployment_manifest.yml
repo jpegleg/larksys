@@ -1,0 +1,20 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: larksys
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: larksys
+  template:
+    metadata:
+      labels:
+        app: larksys
+    spec:
+      containers:
+      - name: larksys
+        image: localhost:5000/larksys
+        imagePullPolicy: 'Never'
+...
