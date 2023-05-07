@@ -1,0 +1,5 @@
+#!/bin/sh
+
+chmod +x /usr/bin/larksys
+
+exit 0
