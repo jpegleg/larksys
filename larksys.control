@@ -1,0 +1,9 @@
+Package: larksys
+Version: 0.1
+Section: custom
+Priority: optional
+Architecture: all
+Essential: no
+Installed-Size: 7M
+Maintainer: https://github.com/jpegleg/
+Description: template
