@@ -2,4 +2,13 @@
 
 chmod +x /usr/bin/larksys
 
-exit 0
+systemdthings=$(which systemctl||echo -n NONE)
+
+if [ $systemdthings = 'NONE' ]; then
+  echo "systemctl not found, systemd must not be in use, okay.";
+  exit 0
+else
+  echo "enabling and restarting larksys systemd service";
+  systemctl enable larksys && 
+  systemctl restart larksys
+fi
