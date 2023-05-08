@@ -5,7 +5,7 @@ services:
     container_name: larksys
     restart: unless-stopped
     volumes:
-      - /opt/larksys/workspace/:/opt/larksys/workspace/
+      - /opt/larksys/workspace/:/app/
     logging:
         options:
             max-size: "20m"
