@@ -7,9 +7,10 @@ run as a service and take no client connections.
 - Docker (or Podman)
 - Docker Compose
 - Kubernetes
-- RPM
-- Deb
+- .rpm (RPM packages)
+- .deb (debian packages)
 - systemd
+- ansible
 
 The point isn't to use all of the files in prod at once, as we would not have Docker, k8s, and systemd all at the same time :)
 
@@ -22,7 +23,7 @@ CI reference templates for musl lib-c statically linked binary compiling:
 - Jenkinsfile
 - buildme.sh
 
-Both the example Jenkinsfile and the buildme.sh perform the same shell actions to compile a statically linked rust binary with cargo and also run cargo test.
+Both the example Jenkinsfile and the buildme.sh perform the same shell actions to compile a statically linked rust binary with cargo and also run cargo test, then collect checksums and tokei report on files to artifacts, and finally pack up a tarball with the binary and artifacts.
 
 #### Rust unit test reference
 
