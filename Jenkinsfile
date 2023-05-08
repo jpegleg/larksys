@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'deb'
+        label 'cargo-docker'
     }
 
 
