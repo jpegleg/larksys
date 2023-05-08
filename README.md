@@ -17,3 +17,13 @@ Instead the point is to replace "larksys" in the files with the name of the prog
 based on the needs, and use in CI for automatic packaging of RPM, Deb, Docker (OCI build), and have k8s and compose
 YAML ready to go.
 
+CI reference templates for musl lib-c statically linked binary compiling:
+
+- Jenkinsfile
+- buildme.sh
+
+Both the example Jenkinsfile and the buildme.sh perform the same shell actions to compile a statically linked rust binary with cargo and also run cargo test.
+
+#### Rust unit test reference
+
+The template file `src/lib.rs` is to be a starting point for unit tests.
