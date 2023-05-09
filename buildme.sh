@@ -6,6 +6,7 @@ echo "Statically linked musl libc binary ./larksys compiled."
 echo
 echo "Running tests..."
 cargo test
+cargo clippy
 echo "Tests ended, gathering stats and checksums..."
 echo
 which tokei || cargo install tokei
