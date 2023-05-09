@@ -20,6 +20,7 @@ pipeline {
             steps {
                 // test the program
                 sh "cargo test"
+                sh "cargo clippy"
                 sh "bash regression.sh"
             }
             post {
