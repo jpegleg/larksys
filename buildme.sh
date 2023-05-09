@@ -7,6 +7,7 @@ echo
 echo "Running tests..."
 cargo test
 cargo clippy
+bash regression.sh
 echo "Tests ended, gathering stats and checksums..."
 echo
 which tokei || cargo install tokei
