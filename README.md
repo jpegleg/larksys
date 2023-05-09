@@ -23,7 +23,7 @@ CI reference templates for musl lib-c statically linked binary compiling:
 - Jenkinsfile
 - buildme.sh
 
-Both the example Jenkinsfile and the buildme.sh perform the same shell actions to compile a statically linked rust binary with cargo and also run cargo test, then collect checksums and tokei report on files to artifacts, and finally pack up a tarball with the binary and artifacts.
+Both the example Jenkinsfile and the buildme.sh perform the same shell actions to compile a statically linked rust binary with cargo and also run cargo test and cargo clippy, run a regression test script, then collect checksums and tokei report on files to artifacts, and finally pack up a tarball with the binary and artifacts.
 
 #### Rust unit test reference
 
