@@ -1,6 +1,6 @@
 [Unit]
-Description=
-After=multi-user.target
+Description=larksys
+After=network.target
 
 [Service]
 Type=simple
@@ -8,4 +8,4 @@ ExecStart=/usr/bin/larksys
 TimeoutStartSec=0
 
 [Install]
-WantedBy=larksys.target
+WantedBy=multi-user.target
